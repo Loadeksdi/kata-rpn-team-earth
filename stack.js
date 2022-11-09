@@ -21,7 +21,8 @@ class Stack{
                 this.stack.push(element);
             }
             else{
-                this.evaluateExpression(element);
+                const result = this.evaluateExpression(element);
+                this.stack.push(result);
             }
         });
     }
