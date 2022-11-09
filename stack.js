@@ -8,6 +8,9 @@ class Stack{
     top(){
         return this.stack[this.stack.length-1];
     }
+    size(){
+        return this.stack.length;
+    }
 }
 
 module.exports = Stack;
