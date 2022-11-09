@@ -39,6 +39,8 @@ class Stack{
                 return val2 - val1;
             case "*":
                 return val2 * val1;
+            case "/":
+                return val2 / val1;
         }
     }
 
