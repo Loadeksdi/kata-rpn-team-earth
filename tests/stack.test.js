@@ -76,4 +76,14 @@ describe('Stack', () => {
         stack.computeExpression("20 2 / 5 + 3 - 6 *");
         expect(stack.top()).toBe(72);
     });
+    it('add expression string 9 sqrt and expect result to be 3', () => {
+        const stack = new Stack();
+        stack.computeExpression("9 sqrt");
+        expect(stack.top()).toBe(3);
+    });
+    it('add expression string 8 4 2 3 max and expect result to be 8', () => {
+        const stack = new Stack();
+        stack.computeExpression("8 4 2 3 max");
+        expect(stack.top()).toBe(8);
+    });
 });

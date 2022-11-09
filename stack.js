@@ -14,6 +14,9 @@ class Stack{
     size(){
         return this.stack.length;
     }
+    isEmpty(){
+        return this.stack.length === 0;
+    }
     computeExpression(string){
         const stringArray = string.split(" ");
         stringArray.forEach(element => {
@@ -30,17 +33,29 @@ class Stack{
         return !parseInt(token) ? false : true;
     }
     evaluateExpression(operand){
-        const val1 = parseInt(this.pop());
-        const val2 = parseInt(this.pop());
-        switch(operand){
-            case "+":
-                return val2 + val1;
-            case "-":
-                return val2 - val1;
-            case "*":
-                return val2 * val1;
-            case "/":
-                return Math.floor(val2 / val1);
+        switch (operand){
+            case "sqrt":
+                return Math.sqrt(this.pop());
+            case "max":
+                const arr = [];
+                while(!this.isEmpty()){
+                   arr.push(this.pop());
+                }
+                return Math.max(...arr);
+            default: {
+                const val1 = parseInt(this.pop());
+                const val2 = parseInt(this.pop());
+                switch(operand){
+                    case "+":
+                        return val2 + val1;
+                    case "-":
+                        return val2 - val1;
+                    case "*":
+                        return val2 * val1;
+                    case "/":
+                        return Math.floor(val2 / val1);
+                }
+            }
         }
     }
 
