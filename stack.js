@@ -19,12 +19,24 @@ class Stack{
         stringArray.forEach(element => {
             if (this.isInt(element)){
                 this.stack.push(element);
-            }  
+            }
+            else{
+                this.evaluateExpression(element);
+            }
         });
     }
     isInt(token){
         return !parseInt(token) ? false : true;
     }
+    evaluateExpression(operand){
+        const val1 = this.pop();
+        const val2 = this.pop();
+        switch(operand){
+            case "+":
+                return val1 + val2;
+        }
+    }
+
 }
 
 module.exports = Stack;
