@@ -23,10 +23,10 @@ describe('Stack', () => {
         stack.push('hello');
         expect(stack.size()).toBe(3);
     });
-    it('add expression string 20 2 + and expect stack size to be ', () => {
+    it('add expression string 20 2 + and expect stack size not to be 3', () => {
         const stack = new Stack();
-        stack.pushString("20 2 +");
-        expect(stack.size()).toBe(3);
+        stack.computeExpression("20 2 +");
+        expect(stack.size()).not.toBe(3);
     });
     it('check that + is not an integer', () => {
         const stack = new Stack();

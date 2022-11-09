@@ -14,10 +14,12 @@ class Stack{
     size(){
         return this.stack.length;
     }
-    pushString(string){
+    computeExpression(string){
         const stringArray = string.split(" ");
         stringArray.forEach(element => {
-            this.stack.push(element);
+            if (this.isInt(element)){
+                this.stack.push(element);
+            }  
         });
     }
     isInt(token){
