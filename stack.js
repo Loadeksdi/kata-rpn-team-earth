@@ -5,6 +5,9 @@ class Stack{
     push(value){
         this.stack.push(value);
     }
+    pop(){
+        return this.stack.pop();
+    }
     top(){
         return this.stack[this.stack.length-1];
     }

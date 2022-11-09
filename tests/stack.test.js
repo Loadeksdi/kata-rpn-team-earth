@@ -10,6 +10,12 @@ describe('Stack', () => {
         stack.push(20);
         expect(stack.top()).toBe(20);
     });
+    it('remove 20 from stack', () => {
+        const stack = new Stack();
+        stack.push(20);
+        stack.pop();
+        expect(stack.size()).toBe(0);
+    });
     it('add 3 elements and expect stack size to be 3', () => {
         const stack = new Stack();
         stack.push(20);
