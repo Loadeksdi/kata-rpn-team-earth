@@ -30,8 +30,8 @@ class Stack{
         return !parseInt(token) ? false : true;
     }
     evaluateExpression(operand){
-        const val1 = this.pop();
-        const val2 = this.pop();
+        const val1 = parseInt(this.pop());
+        const val2 = parseInt(this.pop());
         switch(operand){
             case "+":
                 return val1 + val2;

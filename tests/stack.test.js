@@ -43,4 +43,9 @@ describe('Stack', () => {
         stack.computeExpression("20 2 +");
         expect(stack.size()).toBe(1);
     });
+    it('add expression string 20 2 + and expect stack top to be 22', () => {
+        const stack = new Stack();
+        stack.computeExpression("20 2 +");
+        expect(stack.top()).toBe(22);
+    });
 });
