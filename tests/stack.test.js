@@ -54,4 +54,10 @@ describe('Stack', () => {
         stack.push(2);
         expect(stack.evaluateExpression("-")).toBe(18);
     });
+    it('add expression string 20 2 * and expect result to be 40', () => {
+        const stack = new Stack();
+        stack.push(20);
+        stack.push(2);
+        expect(stack.evaluateExpression("*")).toBe(40);
+    });
 });

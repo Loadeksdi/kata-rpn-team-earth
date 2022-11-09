@@ -34,9 +34,11 @@ class Stack{
         const val2 = parseInt(this.pop());
         switch(operand){
             case "+":
-                return val1 + val2;
+                return val2 + val1;
             case "-":
                 return val2 - val1;
+            case "*":
+                return val2 * val1;
         }
     }
 
