@@ -35,6 +35,8 @@ class Stack{
         switch(operand){
             case "+":
                 return val1 + val2;
+            case "-":
+                return val2 - val1;
         }
     }
 

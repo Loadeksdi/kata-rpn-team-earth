@@ -48,4 +48,10 @@ describe('Stack', () => {
         stack.computeExpression("20 2 +");
         expect(stack.top()).toBe(22);
     });
+    it('add expression string 20 2 - and expect result to be 18', () => {
+        const stack = new Stack();
+        stack.push(20);
+        stack.push(2);
+        expect(stack.evaluateExpression("-")).toBe(18);
+    });
 });
