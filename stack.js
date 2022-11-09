@@ -11,6 +11,12 @@ class Stack{
     size(){
         return this.stack.length;
     }
+    pushString(string){
+        const stringArray = string.split(" ");
+        stringArray.forEach(element => {
+            this.stack.push(element);
+        });
+    }
 }
 
 module.exports = Stack;
