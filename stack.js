@@ -20,6 +20,9 @@ class Stack{
             this.stack.push(element);
         });
     }
+    isInt(token){
+        return !parseInt(token) ? false : true;
+    }
 }
 
 module.exports = Stack;
