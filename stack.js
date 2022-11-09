@@ -40,7 +40,7 @@ class Stack{
             case "*":
                 return val2 * val1;
             case "/":
-                return val2 / val1;
+                return Math.floor(val2 / val1);
         }
     }
 

@@ -66,5 +66,9 @@ describe('Stack', () => {
         stack.push(2);
         expect(stack.evaluateExpression("/")).toBe(10);
     });
-
+    it('add expression string 20 2 / 5 + 3 - 6 * and expect stack size to be 1', () => {
+        const stack = new Stack();
+        stack.computeExpression("20 2 / 5 + 3 - 6 *");
+        expect(stack.top()).toBe(72);
+    });
 });
